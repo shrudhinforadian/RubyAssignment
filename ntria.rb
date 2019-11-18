@@ -9,11 +9,12 @@ def fact(n)
   end
   return count
 end
-start=(500*501)/2
-
+start=1
+n=1
 size=500
 while fact(start)<size
   puts "#{start}fact count=#{fact(start)}"
-  start+= (start+1)
+  n+=1
+  start+= n
 end
 puts start
