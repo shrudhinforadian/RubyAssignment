@@ -10,12 +10,13 @@ end
 n=0
 sum=0
 fi=0
-for n in 0..400000
+i=0
+while (i<1)
     fi=fib(n)
-    if fi.even?
-      puts sum
-      sum+=fi
+    puts "#{n} th term is #{fi}"
+    if( fi.to_s.size==1000)
+      puts "#{n} th term is #{fi} have size 1000"
+      i=2
     end
     n+=1
   end
-  puts sum
