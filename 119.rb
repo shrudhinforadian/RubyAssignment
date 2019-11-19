@@ -1,7 +1,7 @@
 start=614656
 count=10
 while count<31
-  start+=1
+  start*=2
   s=start.to_s.split("")
   len=s.size
   sum=0
