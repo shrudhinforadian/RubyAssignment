@@ -1,7 +1,7 @@
 start=614656
 count=10
 while count<31
-  start*=2
+  start+=1
   s=start.to_s.split("")
   len=s.size
   sum=0
@@ -9,7 +9,7 @@ while count<31
     sum+=t.to_i
   end
   p=1
-  for p in 1..len
+  for p in 1..sum
     if start==sum**p
       puts "#{start} hi #{sum} hlo #{p}"
       count+=1
