@@ -1,6 +1,7 @@
+
 class Building
-  require "./tenant"
-  require "./modules"
+  require './tenant'
+  require './modules'
   def initialize(address)
     @address = address
     @apartments = []
@@ -11,15 +12,15 @@ class Building
   end
 
   def remove_apartment(apartment)
-    if !(apartment.tenants.empty?) && (@apartments.include? apartment.apartment_no)
-       @apartments.delete_if { |apartments| apartments.apartment_no == apartment.apartment_no }
+    if !apartment.tenants.empty? && (@apartments.include? apartment.apartment_no)
+      @apartments.delete_if { |apartments| apartments.apartment_no == apartment.apartment_no }
     else
-      "Apartment is not empty or apartment number is invalid"
+      'Apartment is not empty or apartment number is invalid'
     end
   end
 
   def total_sq_ft
-    total_sq_ft=0
+    total_sq_ft = 0
     @apartments.each do |apartments|
       total_sq_ft += apartments.sq_ft
     end

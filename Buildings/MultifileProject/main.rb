@@ -1,9 +1,9 @@
-require "./tenant"
-require "./modules"
-require "./buildings"
-require "./apartment"
-tenant1 = Tenant.new('Shrudhin', 21, 855)
 
+require './tenant'
+require './modules'
+require './buildings'
+require './apartment'
+tenant1 = Tenant.new('Shrudhin', 21, 855)
 tenant2 = Tenant.new('Shreyas', 22, 755)
 tenant3 = Tenant.new('Snehith', 24, 815)
 tenant4 = Tenant.new('Ferbin', 21, 655)
@@ -27,5 +27,6 @@ puts building2.total_revenue
 puts apartment1.avg_credit
 puts building2.remove_apartment(apartment2)
 puts building1.remove_apartment(apartment1)
-puts apartment1.remove_tenant("Amal")
-puts apartment1.remove_tenant("Shrudhin")
+puts apartment1.remove_tenant('Amal')
+puts apartment1.remove_tenant('Shrudhin')
+puts building1.total_tenants

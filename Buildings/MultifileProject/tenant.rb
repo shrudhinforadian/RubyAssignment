@@ -1,4 +1,3 @@
-
 class Tenant
   require './modules'
   include CreditRating
