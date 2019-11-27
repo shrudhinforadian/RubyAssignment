@@ -29,7 +29,7 @@ end
 
 class Apartment
   extend CreditRating
-  attr_reader :apartment_no, :rent, :sq_ft, :bedroom_count, :bathroom_count, :tenants, :total_revenue
+  attr_reader :apartment_no, :rent, :sq_ft, :bedroom_count, :bathroom_count, :tenants
   def initialize(apartment_no, rent, sq_ft, bedroom_count, bathroom_count)
     @apartment_no = apartment_no
     @rent = rent
@@ -49,9 +49,16 @@ class Apartment
     end
   end
 
-  def remove_tenant(tenant)
-    @tenants.delete_if { |tenants| tenants.name == tenant.name }
+  def remove_tenant(name)
+    if @tenants.each do |tenant_check|
+      if tenant_check.name==name
+        @tenants.delete_if { |tenants| tenants.name == name }
+      else
+        "Tenant is not exist"
+      end
+    end
   end
+end
 
   def remove_all_tenants
     @tenants.delete_if { true }
@@ -77,7 +84,11 @@ class Building
   end
 
   def remove_apartment(apartment)
-    @apartments.delete_if { |apartments| apartments.apartment_no == apartment.apartment_no }
+    if !(apartment.tenants.empty?) && (@apartments.include? apartment.apartment_no)
+       @apartments.delete_if { |apartments| apartments.apartment_no == apartment.apartment_no }
+    else
+      "Apartment is not empty or apartment number is invalid"
+    end
   end
 
   def total_sq_ft
@@ -106,7 +117,10 @@ class Building
     name
   end
 end
+
+
 tenant1 = Tenant.new('Shrudhin', 21, 855)
+
 tenant2 = Tenant.new('Shreyas', 22, 755)
 tenant3 = Tenant.new('Snehith', 24, 815)
 tenant4 = Tenant.new('Ferbin', 21, 655)
@@ -128,3 +142,7 @@ building1.add_apartment(apartment2)
 puts building1.total_tenants
 puts building2.total_revenue
 puts apartment1.avg_credit
+puts building2.remove_apartment(apartment2)
+puts building1.remove_apartment(apartment1)
+puts apartment1.remove_tenant("Amal")
+puts apartment1.remove_tenant("Shrudhin")
