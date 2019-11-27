@@ -125,6 +125,6 @@ building2 = Building.new('BTM')
 building1.add_apartment(apartment1)
 building2.add_apartment(apartment1)
 building1.add_apartment(apartment2)
-# puts building1.total_tenants
+puts building1.total_tenants
 puts building2.total_revenue
 puts apartment1.avg_credit
