@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 module CreditRating
   def credit_rating(credit_score)
