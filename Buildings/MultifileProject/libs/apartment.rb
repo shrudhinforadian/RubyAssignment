@@ -2,6 +2,8 @@
 class Apartment
   require_relative './modules'
   include CreditRating
+  extend LoadFile
+  extend ExportFile
   attr_reader :apartment_no, :rent, :sq_ft, :bedroom_count, :bathroom_count, :tenants
   @all = []
   self.class.public_send(:attr_reader, :all)
@@ -14,6 +16,7 @@ class Apartment
     @tenants = []
     self.class.all << self
     puts "Apartment#{@apartment_no} inserted successfully New Apartment list"
+    export
   end
 
   def all
@@ -60,5 +63,17 @@ class Apartment
     list.each do |data|
       puts "Name : #{data.name} \tAge : #{data.age} \tCredit_score : #{data.credit_score}"
     end
+  end
+  def export
+    apartment = { "Apartments" => [] }
+    self.class.all.each do |item|
+      temp = {}
+      temp["bedrooms"] = item.bedroom_count
+      temp["bathrooms"]=item.bathroom_count
+      temp["number"]=item.apartment_no
+      apartment["Apartments"] << temp
+    end
+    Apartment.export_yaml(apartment)
+
   end
 end

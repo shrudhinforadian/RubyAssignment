@@ -1,0 +1,30 @@
+---
+Buildings:
+- address: BTM
+- address: Madiwala
+- address: HSR
+Tenants:
+- credit_score: 955
+  name: Shrudhu
+- credit_score: 755
+  name: Shreyas
+- credit_score: 815
+  name: Snehith
+- credit_score: 655
+  name: Ferbin
+- credit_score: 555
+  name: Twinkle
+- credit_score: 455
+  name: Amal
+- credit_score: 650
+  name: Gayatri
+Apartments:
+- bedrooms: 90
+  bathrooms: 60
+  number: 1
+- bedrooms: 80
+  bathrooms: 50
+  number: 2
+- bedrooms: 50
+  bathrooms: 30
+  number: 3

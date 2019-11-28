@@ -1,0 +1,48 @@
+
+tenants:
+- name:         Shrudhu
+  age:          21
+  credit_score: 955
+- name:         Shreyas
+  age:          23
+  credit_score: 755
+- name:         Snehith
+  age:          22
+  credit_score: 815
+- name:         Ferbin
+  age:          20
+  credit_score: 655
+- name:         Twinkle
+  age:          23
+  credit_score: 555
+- name:         Amal
+  age:          29
+  credit_score: 455
+- name:         Gayatri
+  age:          26
+  credit_score: 650
+apartments:
+-  apartment_no: 1
+   rent:        6500
+   sq_ft:       5000
+   bedroom_count: 90
+   bathroom_count: 60
+-  apartment_no: 2
+   rent:        6000
+   sq_ft:       4000
+   bedroom_count: 80
+   bathroom_count: 50
+-  apartment_no: 3
+   rent:        5500
+   sq_ft:       4000
+   bedroom_count: 50
+   bathroom_count: 30
+buildings:
+- building_id:  1
+  address:      "BTM"
+- building_id:  2
+  address:      "Madiwala"
+- building_id:  1
+  address:      "BTM2"
+- building_id:  2
+  address:      "HSR"
