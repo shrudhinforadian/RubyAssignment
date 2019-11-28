@@ -1,7 +1,7 @@
 
 require_relative './libs/modules'
 require_relative './libs/apartment'
-require_relative './libs/buildings'
+require_relative './libs/building'
 require_relative './libs/tenant'
 tenant1 = Tenant.new('Shrudhu', 21, 855)
 tenant2 = Tenant.new('Shreyas', 22, 755)
@@ -9,6 +9,7 @@ tenant3 = Tenant.new('Snehith', 24, 815)
 tenant4 = Tenant.new('Ferbin', 21, 655)
 tenant5 = Tenant.new('Twinkle', 20, 555)
 tenant6 = Tenant.new('Amal', 28, 455)
+ tenant5.all
 apartment1 = Apartment.new(1, 6500, 5000, 90, 60)
 apartment2 = Apartment.new(2, 6000, 4800, 80, 50)
 apartment3 = Apartment.new(3, 4000, 3000, 50, 20)

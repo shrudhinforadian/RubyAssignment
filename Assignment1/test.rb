@@ -1,27 +1,8 @@
-# Way 1
-class Foo
-  def self.bar
-    puts 'class method'
-  end
-end
-
-Foo.bar # "class method"
-
-# Way 2
-class Foo
-  class << self
-    def bar
-      puts 'class method'
-    end
-  end
-end
-
-Foo.bar # "class method"
-
-# Way 3
-class Foo; end
-def Foo.bar
-  puts 'class method'
-end
-
-Foo.bar # "class method"
+a=[1,2,3,4,5,6]
+b=a.to_s
+c=a
+a.delete(2)
+p a.to_s==b
+p b
+p a.to_s
+p c
