@@ -60,13 +60,13 @@ class Apartment
 
   def self.export
     apartment = { 'Apartments' => [] }
-    @@all.each { |item|
+    @@all.each do |item|
       temp = {}
       temp['bedrooms'] = item.bedroom_count
       temp['bathrooms'] = item.bathroom_count
       temp['number'] = item.apartment_no
       apartment['Apartments'] << temp
-  }
+    end
     Apartment.export_yaml(apartment)
   end
 end

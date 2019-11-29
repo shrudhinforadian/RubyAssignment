@@ -7,12 +7,12 @@ class Building
   attr_reader :address, :building_id
   def initialize(building_id, address)
     flag = 0
-    @@all.each { |data|
+    @@all.each do |data|
       if data.building_id == building_id
         return puts 'error Cannot add  building data building id exist'
         break
       end
-    }
+    end
 
     if flag != 1
       @@all << self
@@ -89,14 +89,13 @@ end
     end
   end
 
-
   def self.export
     building = { 'Buildings' => [] }
-    @@all.each { |item|
+    @@all.each do |item|
       temp = {}
       temp['address'] = item.address
       building['Buildings'] << temp
-    }
+    end
 
     Building.export_yaml(building)
    end
