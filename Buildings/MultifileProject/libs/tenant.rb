@@ -20,12 +20,12 @@ class Tenant
 
   def self.export
     tenant = { 'Tenants' => [] }
-    @@all.each { |item|
+    @@all.each do |item|
       temp = {}
       temp['credit_score'] = item.credit_score
       temp['name'] = item.name
       tenant['Tenants'] << temp
-    }
+    end
     Tenant.export_yaml(tenant)
   end
 end
