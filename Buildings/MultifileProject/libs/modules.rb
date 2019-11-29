@@ -1,8 +1,6 @@
-# frozen_string_literal: true
 
 module CreditRating
-  def credit_rating(credit_score)
-    @credit_score = credit_score
+  def credit_rating
     case @credit_score
     when 760..1000
       'Excellent'
@@ -17,14 +15,12 @@ module CreditRating
     end
   end
 end
+
 module LoadFile
   require 'yaml'
   def load_yaml(item)
     data = YAML.safe_load(File.read('data/input.yml'))
     list = data[item]
-    list.each do |data|
-      data
-    end
   end
 end
 module ExportFile
@@ -32,6 +28,6 @@ module ExportFile
   def export_yaml(item)
     data_in = YAML.safe_load(File.read('data/output.yml'))
     item = data_in.merge(item) if data_in
-    p data = File.open('data/output.yml', 'w') { |file| file.write(item.to_yaml) }
+    data = File.open('data/output.yml', 'w') { |file| file.write(item.to_yaml) }
   end
 end

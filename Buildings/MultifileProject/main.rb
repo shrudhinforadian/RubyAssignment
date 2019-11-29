@@ -36,30 +36,38 @@ require_relative './libs/tenant'
 # building2.total_revenue
 # apartment1.avg_credit
 # building1.total_tenants
-building=[]
-apartment=[]
-tenant=[]
-p buildings=Building.load_yaml("buildings")
+building = []
+apartment = []
+tenant = []
+p buildings = Building.load_yaml('buildings')
 buildings.each do |item|
-  id=item["building_id"]
-  address=item["address"]
-  building.push Building.new(id,address)
-end
-p apartments=Apartment.load_yaml("apartments")
-apartments.each do |item|
-  apartment_no=item["apartment_no"]
-  rent=item["rent"]
-  sq_ft=item["sq_ft"]
-  bedroom_count=item["bedroom_count"]
-  bathroom_count=item["bathroom_count"]
-  apartment.push Apartment.new(apartment_no, rent, sq_ft, bedroom_count, bathroom_count)
-end
- p tenants=Tenant.load_yaml("tenants")
-tenants.each do |item|
-  name=item["name"]
-  age=item["age"]
-  credit_score=item["credit_score"]
-  tenant.push Tenant.new(name,age,credit_score)
+  id = item['building_id']
+  address = item['address']
+  building.push Building.new(id, address)
 end
 
+p apartments = Apartment.load_yaml('apartments')
+apartments.each do |item|
+  apartment_no = item['apartment_no']
+  rent = item['rent']
+  sq_ft = item['sq_ft']
+  bedroom_count = item['bedroom_count']
+  bathroom_count = item['bathroom_count']
+  apartment.push Apartment.new(apartment_no, rent, sq_ft, bedroom_count, bathroom_count)
+end
+
+p tenants = Tenant.load_yaml('tenants')
+tenants.each do |item|
+  name = item['name']
+  age = item['age']
+  credit_score = item['credit_score']
+  tenant.push Tenant.new(name, age, credit_score)
+end
+apartment[0].add_tenant(tenant[0])
+
+p apartment[0].print_all_tenants
+Tenant.export
+Building.export
+Apartment.export
 # Building.export_yaml(building)
+p apartment

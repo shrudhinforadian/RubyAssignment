@@ -1,8 +1,4 @@
 ---
-Buildings:
-- address: BTM
-- address: Madiwala
-- address: HSR
 Tenants:
 - credit_score: 955
   name: Shrudhu
@@ -18,6 +14,10 @@ Tenants:
   name: Amal
 - credit_score: 650
   name: Gayatri
+Buildings:
+- address: BTM
+- address: Madiwala
+- address: HSR
 Apartments:
 - bedrooms: 90
   bathrooms: 60
