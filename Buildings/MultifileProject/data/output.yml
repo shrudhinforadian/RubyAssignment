@@ -1,53 +1,53 @@
 ---
 Tenants:
 - credit_score: 955
-  name: Shrudhu2
-  age: 21
-  rating: Excellent
+  name:       Shrudhu2
+  age:        21
+  rating:     Excellent
 - credit_score: 755
-  name: Shreyas2
-  age: 23
-  rating: Great
+  name:       Shreyas2
+  age:        23
+  rating:     Great
 - credit_score: 815
-  name: Snehith2
-  age: 22
-  rating: Excellent
+  name:       Snehith2
+  age:        22
+  rating:     Excellent
 - credit_score: 655
-  name: Ferbin2
-  age: 20
-  rating: Mediocre
+  name:       Ferbin2
+  age:        20
+  rating:     Mediocre
 - credit_score: 555
-  name: Twinkle2
-  age: 23
-  rating: Bad
+  name:       Twinkle2
+  age:        23
+  rating:     Bad
 - credit_score: 455
-  name: Amal2
-  age: 29
-  rating: Bad
+  name:       Amal2
+  age:        29
+  rating:     Bad
 - credit_score: 650
-  name: Gayatri2
-  age: 26
-  rating: Mediocre
+  name:       Gayatri2
+  age:        26
+  rating:     Mediocre
 Buildings:
 - building_id: 11
-  address: BTM
+  address:    BTM
 - building_id: 12
-  address: Madiwala
+  address:    Madiwala
 - building_id: 13
-  address: BTM2
+  address:    BTM2
 Apartments:
 - apartment_no: 11
-  bedrooms: 90
-  bathrooms: 60
-  number: 11
+  bedrooms:   90
+  bathrooms:  60
+  number:     11
   Avg_credit: 855
 - apartment_no: 12
-  bedrooms: 80
-  bathrooms: 50
-  number: 12
+  bedrooms:   80
+  bathrooms:  50
+  number:     12
   Avg_credit: 755
 - apartment_no: 13
-  bedrooms: 50
-  bathrooms: 30
-  number: 13
+  bedrooms:   50
+  bathrooms:  30
+  number:     13
   Avg_credit: 815

@@ -80,11 +80,11 @@ Apartment.export
 
 # p apartment
 
-  # {reise errors
-  # remove @
-  # input output change}
-  buildings[3].add_apartment(apartments[0])
-  buildings[3].print_all_load_apartments
-  buildings[3].remove_apartment(apartments[0])
-  apartments[0].remove_tenant(tenants[1].name)
-  apartments[0].remove_tenant(tenants[1].name)
+# {reise errors
+# remove @
+# input output change}
+buildings[3].add_apartment(apartments[0])
+buildings[3].print_all_load_apartments
+buildings[3].remove_apartment(apartments[0])
+apartments[0].remove_tenant(tenants[1].name)
+apartments[0].remove_tenant(tenants[1].name)
