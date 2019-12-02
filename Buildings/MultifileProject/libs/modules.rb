@@ -16,15 +16,12 @@ module CreditRating
   end
 end
 
-module LoadFile
+module FileOperations
   require 'yaml'
   def load_yaml(item)
     data = YAML.safe_load(File.read('data/input.yml'))
     list = data[item]
   end
-end
-module ExportFile
-  require 'yaml'
   def export_yaml(item)
     data_in = YAML.safe_load(File.read('data/output.yml'))
     item = data_in.merge(item) if data_in

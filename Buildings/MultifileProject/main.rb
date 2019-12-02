@@ -36,38 +36,55 @@ require_relative './libs/tenant'
 # building2.total_revenue
 # apartment1.avg_credit
 # building1.total_tenants
-building = []
-apartment = []
-tenant = []
-p buildings = Building.load_yaml('buildings')
-buildings.each do |item|
+
+buildings = []
+p load_buildings = Building.load_yaml('buildings')
+load_buildings.each do |item|
   id = item['building_id']
   address = item['address']
-  building.push Building.new(id, address)
+  buildings.push Building.new(id, address)
 end
-
-p apartments = Apartment.load_yaml('apartments')
-apartments.each do |item|
+apartments = []
+p load_apartments = Apartment.load_yaml('apartments')
+load_apartments.each do |item|
   apartment_no = item['apartment_no']
   rent = item['rent']
   sq_ft = item['sq_ft']
   bedroom_count = item['bedroom_count']
   bathroom_count = item['bathroom_count']
-  apartment.push Apartment.new(apartment_no, rent, sq_ft, bedroom_count, bathroom_count)
+  apartments.push Apartment.new(apartment_no, rent, sq_ft, bedroom_count, bathroom_count)
 end
-
-p tenants = Tenant.load_yaml('tenants')
-tenants.each do |item|
+tenants = []
+p load_tenants = Tenant.load_yaml('tenants')
+load_tenants.each do |item|
   name = item['name']
   age = item['age']
   credit_score = item['credit_score']
-  tenant.push Tenant.new(name, age, credit_score)
+  tenants.push Tenant.new(name, age, credit_score)
 end
-apartment[0].add_tenant(tenant[0])
+# apartment[0].add_tenant(tenant[0])
+#
+# p apartment[0].print_all_tenants
 
-p apartment[0].print_all_tenants
+apartments[0].add_tenant(tenants[0])
+apartments[0].add_tenant(tenants[1])
+
+apartments[1].add_tenant(tenants[1])
+apartments[2].add_tenant(tenants[2])
+buildings[0].add_apartment(apartments[0])
+buildings[1].add_apartment(apartments[1])
+buildings[2].add_apartment(apartments[2])
 Tenant.export
 Building.export
 Apartment.export
-# Building.export_yaml(building)
-p apartment
+
+# p apartment
+
+  # {reise errors
+  # remove @
+  # input output change}
+  buildings[3].add_apartment(apartments[0])
+  buildings[3].print_all_load_apartments
+  buildings[3].remove_apartment(apartments[0])
+  apartments[0].remove_tenant(tenants[1].name)
+  apartments[0].remove_tenant(tenants[1].name)
