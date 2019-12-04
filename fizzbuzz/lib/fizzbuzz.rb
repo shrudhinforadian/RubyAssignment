@@ -17,6 +17,7 @@ begin
         start = args[0]
         stop = args[1]
         check = ErrorHandle.error_check(*args)
+        
         if check
           (start..stop).each do |i|
             puts " #{check_fizzbuzz(i)}" unless check_fizzbuzz(i).nil?

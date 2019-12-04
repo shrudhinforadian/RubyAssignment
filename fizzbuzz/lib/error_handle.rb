@@ -28,7 +28,6 @@ class ErrorHandle
 
     def check_defined(*_args)
       start = defined?(:args[0])
-      .
       stop = defined?(:args[1])
       puts raise 'Invalid Data' unless !start.nil? && !stop.nil?
       true
