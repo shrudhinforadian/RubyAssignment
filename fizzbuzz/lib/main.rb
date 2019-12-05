@@ -13,4 +13,3 @@ class FizzBuzz
     end
   end
 end
-FizzBuzz.fizzbuzz(2,5)
